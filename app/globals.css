@@ -110,3 +110,18 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Horizontal scroll edge fade mask */
+.scroll-mask-x {
+  mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+}
+
+/* Mobile touch tap-highlight and action optimization */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, [role="button"], input, a {
+  touch-action: manipulation;
+}

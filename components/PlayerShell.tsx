@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { PLAYLISTS, Track, Playlist } from "@/lib/tracks";
 
 declare global {
@@ -74,11 +74,11 @@ const Clock = () => {
   if (!time) return null;
 
   return (
-    <div className="font-mono text-xs sm:text-sm tracking-widest text-white/90 bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.5)] flex items-center gap-0.5 select-none">
+    <div className="font-mono text-[11px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest text-white/90 bg-black/55 backdrop-blur-xl px-2.5 sm:px-3.5 py-1.5 rounded-full border border-white/15 shadow-[0_4px_16px_rgba(0,0,0,0.5)] flex items-center gap-0.5 select-none">
       <span>{time.hour}</span>
       <span className="animate-colon-blink text-accent font-bold">:</span>
       <span>{time.minute}</span>
-      <span className="text-[10px] text-white/50 ml-1">IST</span>
+      <span className="text-[9px] sm:text-[10px] text-white/50 ml-1 hidden xs:inline">IST</span>
     </div>
   );
 };
@@ -97,13 +97,13 @@ const ListenerCount = () => {
   }, []);
 
   return (
-    <div className="text-xs font-semibold text-white/90 bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.5)] flex items-center gap-2 select-none">
-      <span className="relative flex h-2 w-2">
+    <div className="text-[11px] sm:text-xs font-semibold text-white/90 bg-black/55 backdrop-blur-xl px-2.5 sm:px-3.5 py-1.5 rounded-full border border-white/15 shadow-[0_4px_16px_rgba(0,0,0,0.5)] flex items-center gap-1.5 sm:gap-2 select-none">
+      <span className="relative flex h-2 w-2 shrink-0">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-85" />
         <span className="relative inline-flex rounded-full h-2 w-2 bg-accent shadow-[0_0_8px_var(--accent-color)]" />
       </span>
       <span className="tabular-nums font-mono">{count.toLocaleString()}</span>
-      <span className="text-white/60 font-sans text-[11px] hidden xs:inline">ऐकणारे</span>
+      <span className="text-white/60 font-sans text-[10px] sm:text-[11px] hidden sm:inline">ऐकणारे</span>
     </div>
   );
 };
@@ -122,26 +122,28 @@ const PlaylistSelector = ({
   onSelectPlaylist: (index: number) => void;
 }) => {
   return (
-    <div className="flex justify-start sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto py-1 px-1 max-w-full no-scrollbar select-none scroll-smooth shrink-0">
-      {playlists.map((playlist, idx) => {
-        const isActive = idx === currentPlaylistIndex;
-        return (
-          <button
-            key={playlist.id}
-            onClick={() => onSelectPlaylist(idx)}
-            className={`whitespace-nowrap px-3 sm:px-4 py-1.5 text-xs rounded-full border transition-all duration-300 font-medium cursor-pointer flex items-center gap-1.5 ${
-              isActive
-                ? "bg-accent/20 border-accent text-accent font-semibold shadow-[0_0_16px_rgba(245,158,11,0.25)] scale-[1.02]"
-                : "bg-black/40 border-white/10 text-white/65 hover:text-white hover:bg-white/10 hover:border-white/20"
-            }`}
-          >
-            <span>{playlist.name}</span>
-            <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-accent/30 text-white" : "bg-white/10 text-white/50"}`}>
-              {playlist.tracks.length}
-            </span>
-          </button>
-        );
-      })}
+    <div className="relative w-full overflow-hidden">
+      <div className="flex justify-start sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto py-1 px-1.5 max-w-full no-scrollbar select-none scroll-smooth shrink-0 scroll-mask-x touch-pan-x">
+        {playlists.map((playlist, idx) => {
+          const isActive = idx === currentPlaylistIndex;
+          return (
+            <button
+              key={playlist.id}
+              onClick={() => onSelectPlaylist(idx)}
+              className={`whitespace-nowrap px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs rounded-full border transition-all duration-300 font-medium cursor-pointer flex items-center gap-1.5 active:scale-95 ${
+                isActive
+                  ? "bg-accent/25 border-accent text-accent font-semibold shadow-[0_0_16px_rgba(245,158,11,0.25)] scale-[1.02]"
+                  : "bg-black/45 border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20"
+              }`}
+            >
+              <span>{playlist.name}</span>
+              <span className={`text-[9.5px] sm:text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-accent/30 text-white" : "bg-white/10 text-white/50"}`}>
+                {playlist.tracks.length}
+              </span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -152,7 +154,7 @@ const PlaylistSelector = ({
 
 const VinylDisc = ({ isPlaying }: { isPlaying: boolean }) => {
   return (
-    <div className="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 select-none shadow-[0_10px_35px_rgba(0,0,0,0.85)] border border-white/15 rounded-full bg-black/80 overflow-hidden group">
+    <div className="relative shrink-0 w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 select-none shadow-[0_10px_35px_rgba(0,0,0,0.85)] border border-white/15 rounded-full bg-black/80 overflow-hidden group">
       {/* Vinyl groove sheen textures */}
       <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none z-10 scale-95" />
       <div className="absolute inset-0 rounded-full border border-white/5 pointer-events-none z-10 scale-75" />
@@ -172,14 +174,14 @@ const VinylDisc = ({ isPlaying }: { isPlaying: boolean }) => {
 
       {/* Center Vinyl Hole / Spindle Ring */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-        <div className="w-4 h-4 rounded-full bg-black/90 ring-2 ring-accent/60 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
+        <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-black/90 ring-2 ring-accent/60 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
       </div>
     </div>
   );
 };
 
 // ----------------------------------------------------
-// SEEKBAR
+// SEEKBAR (Touch-Optimized)
 // ----------------------------------------------------
 
 const SeekBar = ({
@@ -196,10 +198,10 @@ const SeekBar = ({
   return (
     <div
       onPointerDown={onSeek}
-      className="group relative w-full h-6 flex items-center cursor-pointer touch-none select-none"
+      className="group relative w-full h-7 sm:h-6 flex items-center cursor-pointer touch-none select-none -my-1"
       title="गाणे पुढे/मागे करा"
     >
-      <div className="w-full h-[4px] bg-white/15 rounded-full relative overflow-visible">
+      <div className="w-full h-[4px] sm:h-[4px] bg-white/15 rounded-full relative overflow-visible">
         {/* Glow progress bar */}
         <div
           style={{ width: `${percent}%` }}
@@ -208,7 +210,7 @@ const SeekBar = ({
         {/* Slider Thumb knob */}
         <div
           style={{ left: `calc(${percent}% - 6px)` }}
-          className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white ring-2 ring-accent shadow-[0_0_8px_var(--accent-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none"
+          className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white ring-2 ring-accent shadow-[0_0_8px_var(--accent-color)] opacity-80 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none"
         />
       </div>
     </div>
@@ -250,15 +252,22 @@ const SongDrawer = ({
     };
   }, [isOpen]);
 
-  // Flattened track search
+  // Flattened & Deduplicated track search
   const filteredList = useMemo(() => {
     const q = searchQuery.toLowerCase().trim();
     const results: { track: Track; playlistIdx: number; trackIdx: number; playlistName: string }[] = [];
+    const seenVideoIds = new Set<string>();
 
     playlists.forEach((p, pIdx) => {
       if (activeTab !== -1 && activeTab !== pIdx) return;
 
       p.tracks.forEach((t, tIdx) => {
+        // If searching across all tabs, deduplicate tracks so the same song doesn't repeat
+        if (activeTab === -1) {
+          if (seenVideoIds.has(t.videoId)) return;
+          seenVideoIds.add(t.videoId);
+        }
+
         if (!q) {
           results.push({ track: t, playlistIdx: pIdx, trackIdx: tIdx, playlistName: p.name });
         } else {
@@ -278,22 +287,27 @@ const SongDrawer = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-xl animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-3xl border border-white/15 bg-gradient-to-b from-neutral-900/95 to-black/95 shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-6 bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
+      <div className="relative w-full max-w-2xl max-h-[88dvh] sm:max-h-[84vh] flex flex-col rounded-t-[28px] sm:rounded-3xl border border-white/15 bg-gradient-to-b from-neutral-900/98 to-black/98 shadow-[0_25px_60px_rgba(0,0,0,0.95)] overflow-hidden">
         
+        {/* Mobile drag bar handle */}
+        <div className="sm:hidden w-full flex items-center justify-center pt-2.5 pb-1">
+          <div className="w-10 h-1 rounded-full bg-white/25" />
+        </div>
+
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-white/5">
+        <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 border-b border-white/10 bg-white/5">
           <div className="flex items-center gap-2.5">
             <span className="p-2 rounded-xl bg-accent/20 text-accent">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
               </svg>
             </span>
             <div>
-              <h2 className="text-base sm:text-lg font-bold text-white font-marathi">
+              <h2 className="text-sm sm:text-lg font-bold text-white font-marathi">
                 मराठी गाण्यांचा खजिना
               </h2>
-              <p className="text-xs text-white/50 font-mono">
+              <p className="text-[11px] sm:text-xs text-white/50 font-mono">
                 {filteredList.length} गाणी उपलब्ध
               </p>
             </div>
@@ -301,7 +315,7 @@ const SongDrawer = ({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            className="p-2 rounded-full text-white/60 hover:text-white hover:bg-white/10 active:scale-90 transition-colors cursor-pointer"
             aria-label="Close"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -311,25 +325,36 @@ const SongDrawer = ({
         </div>
 
         {/* Search input & Tab filters */}
-        <div className="p-4 border-b border-white/10 flex flex-col gap-3 bg-black/40">
+        <div className="p-3 sm:p-4 border-b border-white/10 flex flex-col gap-2.5 sm:gap-3 bg-black/40">
           <div className="relative w-full">
             <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 fill-current" viewBox="0 0 24 24">
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
             </svg>
             <input
               type="text"
-              placeholder="गाण्याचे नाव, गायक किंवा चित्रपट शोधा... (उदा. सैराट, लता, संजू, कोळी)"
+              placeholder="गाणे, गायक किंवा चित्रपट शोधा..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 text-sm focus:outline-none focus:border-accent/80 transition-colors font-sans"
+              className="w-full pl-10 pr-9 py-2 sm:py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 text-base sm:text-sm focus:outline-none focus:border-accent/80 transition-colors font-sans"
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white p-1"
+                aria-label="Clear Search"
+              >
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+              </button>
+            )}
           </div>
 
           {/* Quick Playlist filter buttons */}
-          <div className="flex gap-1.5 overflow-x-auto no-scrollbar pb-1">
+          <div className="flex gap-1.5 overflow-x-auto no-scrollbar pb-1 scroll-mask-x touch-pan-x">
             <button
               onClick={() => setActiveTab(-1)}
-              className={`px-3 py-1 text-xs rounded-full border transition-all cursor-pointer whitespace-nowrap ${
+              className={`px-3 py-1 text-[11px] sm:text-xs rounded-full border transition-all cursor-pointer whitespace-nowrap active:scale-95 ${
                 activeTab === -1 ? "bg-accent text-black font-bold border-accent" : "bg-white/5 text-white/70 border-white/10 hover:border-white/20"
               }`}
             >
@@ -339,7 +364,7 @@ const SongDrawer = ({
               <button
                 key={p.id}
                 onClick={() => setActiveTab(idx)}
-                className={`px-3 py-1 text-xs rounded-full border transition-all cursor-pointer whitespace-nowrap ${
+                className={`px-3 py-1 text-[11px] sm:text-xs rounded-full border transition-all cursor-pointer whitespace-nowrap active:scale-95 ${
                   activeTab === idx ? "bg-accent text-black font-bold border-accent" : "bg-white/5 text-white/70 border-white/10 hover:border-white/20"
                 }`}
               >
@@ -350,15 +375,14 @@ const SongDrawer = ({
         </div>
 
         {/* Songs List scrollable */}
-        <div className="flex-1 overflow-y-auto p-2 sm:p-3 divide-y divide-white/5">
+        <div className="flex-1 overflow-y-auto p-2 sm:p-3 divide-y divide-white/5 no-scrollbar">
           {filteredList.length === 0 ? (
             <div className="py-12 text-center text-white/40 text-sm font-marathi">
               कोणतेही गाणे सापडले नाही. कृपया वेगळा शब्द शोधा.
             </div>
           ) : (
             filteredList.map(({ track, playlistIdx, trackIdx, playlistName }) => {
-              const isSelected =
-                playlistIdx === currentPlaylistIndex && track.videoId === currentTrack.videoId;
+              const isSelected = track.videoId === currentTrack.videoId;
 
               return (
                 <button
@@ -367,39 +391,36 @@ const SongDrawer = ({
                     onSelectTrack(playlistIdx, trackIdx);
                     onClose();
                   }}
-                  className={`w-full text-left p-3 rounded-2xl flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer ${
+                  className={`w-full text-left p-2.5 sm:p-3 rounded-2xl flex items-center justify-between gap-2.5 sm:gap-3 transition-all duration-200 cursor-pointer active:scale-[0.99] ${
                     isSelected
                       ? "bg-accent/20 border border-accent/40 text-accent shadow-[0_0_12px_rgba(245,158,11,0.2)]"
                       : "hover:bg-white/5 border border-transparent text-white/80 hover:text-white"
                   }`}
                 >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${isSelected ? "bg-accent text-black" : "bg-white/10 text-white/60"}`}>
+                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 ${isSelected ? "bg-accent text-black" : "bg-white/10 text-white/60"}`}>
                       {isSelected ? (
-                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                           <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                         </svg>
                       ) : (
-                        <span className="text-xs font-mono">{trackIdx + 1}</span>
+                        <span className="text-[11px] sm:text-xs font-mono">{trackIdx + 1}</span>
                       )}
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="text-sm font-semibold truncate font-marathi">
+                      <h4 className="text-[13px] sm:text-sm font-semibold truncate font-marathi">
                         {track.title}
                       </h4>
-                      <p className="text-xs text-white/50 truncate">
+                      <p className="text-[11px] sm:text-xs text-white/50 truncate">
                         {track.artist} {track.film ? `• ${track.film}` : ""}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-white/50 border border-white/5 hidden xs:inline">
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                    <span className="text-[9.5px] sm:text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-white/50 border border-white/5 hidden xs:inline">
                       {playlistName}
-                    </span>
-                    <span className="text-xs font-mono text-white/40 tabular-nums">
-                      {track.duration}
                     </span>
                   </div>
                 </button>
@@ -444,6 +465,8 @@ export default function PlayerShell() {
 
   // Handler state refs to prevent event listener closure staleness
   const nextTrackRef = useRef<() => void>(() => {});
+  const prevTrackRef = useRef<() => void>(() => {});
+  const togglePlayRef = useRef<() => void>(() => {});
   const errorRef = useRef<(code: number, videoId: string) => void>(() => {});
   const lastPlayAtRef = useRef<number>(0);
   const currentTrackRef = useRef<Track>(currentTrack);
@@ -454,7 +477,7 @@ export default function PlayerShell() {
 
   const consecutiveErrorsRef = useRef<number>(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentTrackIndex((prev) => {
       const len = currentPlaylist.tracks.length;
       if (isShuffle) {
@@ -465,17 +488,17 @@ export default function PlayerShell() {
       return (prev + 1) % len;
     });
     setElapsed(0);
-  };
+  }, [currentPlaylist.tracks.length, isShuffle]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentTrackIndex((prev) => {
       const len = currentPlaylist.tracks.length;
       return (prev - 1 + len) % len;
     });
     setElapsed(0);
-  };
+  }, [currentPlaylist.tracks.length]);
 
-  const handleTogglePlay = () => {
+  const handleTogglePlay = useCallback(() => {
     if (!playerRef.current || !playerReady) return;
     consecutiveErrorsRef.current = 0;
     if (isPlaying) {
@@ -491,9 +514,9 @@ export default function PlayerShell() {
       } catch (e) {}
       setIsPlaying(true);
     }
-  };
+  }, [isPlaying, isMuted, playerReady, volume]);
 
-  const handleToggleMute = () => {
+  const handleToggleMute = useCallback(() => {
     if (!playerRef.current || !playerReady) return;
     if (isMuted) {
       try {
@@ -507,9 +530,12 @@ export default function PlayerShell() {
       } catch (e) {}
       setIsMuted(true);
     }
-  };
+  }, [isMuted, playerReady, volume]);
 
   nextTrackRef.current = handleNext;
+  prevTrackRef.current = handlePrev;
+  togglePlayRef.current = handleTogglePlay;
+
   errorRef.current = (code: number, videoId: string) => {
     console.warn(`YouTube Player error ${code} on video ${videoId}.`);
     consecutiveErrorsRef.current += 1;
@@ -538,6 +564,50 @@ export default function PlayerShell() {
       nextTrackRef.current();
     }, 1500);
   };
+
+  // Media Session API for Mobile Lock Screen & Bluetooth Controls
+  useEffect(() => {
+    if (typeof window === "undefined" || !("mediaSession" in navigator)) return;
+
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: currentTrack.title,
+        artist: currentTrack.artist,
+        album: currentTrack.film || "गाणी आणि गप्पा",
+        artwork: [
+          { src: `https://img.youtube.com/vi/${currentTrack.videoId}/hqdefault.jpg`, sizes: "480x360", type: "image/jpeg" },
+        ],
+      });
+
+      navigator.mediaSession.setActionHandler("play", () => {
+        if (togglePlayRef.current) togglePlayRef.current();
+      });
+      navigator.mediaSession.setActionHandler("pause", () => {
+        if (togglePlayRef.current) togglePlayRef.current();
+      });
+      navigator.mediaSession.setActionHandler("previoustrack", () => {
+        if (prevTrackRef.current) prevTrackRef.current();
+      });
+      navigator.mediaSession.setActionHandler("nexttrack", () => {
+        if (nextTrackRef.current) nextTrackRef.current();
+      });
+      navigator.mediaSession.setActionHandler("seekto", (details) => {
+        if (details.seekTime && playerRef.current && playerRef.current.seekTo) {
+          playerRef.current.seekTo(details.seekTime, true);
+          setElapsed(details.seekTime);
+        }
+      });
+    } catch (e) {
+      console.warn("MediaSession setup error:", e);
+    }
+  }, [currentTrack]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("mediaSession" in navigator)) return;
+    try {
+      navigator.mediaSession.playbackState = isPlaying ? "playing" : "paused";
+    } catch (e) {}
+  }, [isPlaying]);
 
   // Keyboard controls
   useEffect(() => {
@@ -572,7 +642,7 @@ export default function PlayerShell() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isPlaying, playerReady, duration, elapsed, isMuted, volume]);
+  }, [handleNext, handlePrev, handleToggleMute, handleTogglePlay, isPlaying, playerReady, duration, elapsed, isMuted, volume]);
 
   // Core YouTube API Initialization
   useEffect(() => {
@@ -763,7 +833,7 @@ export default function PlayerShell() {
 
   if (!mounted) {
     return (
-      <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 w-full max-w-xl px-4 sm:px-0 z-40 select-none">
+      <div className="fixed bottom-[max(0.75rem,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 w-full max-w-xl px-3 sm:px-4 z-40 select-none">
         <div className="w-full h-24 rounded-full border border-white/5 bg-white/5 backdrop-blur-md animate-pulse" />
       </div>
     );
@@ -771,32 +841,36 @@ export default function PlayerShell() {
 
   return (
     <>
-      {/* ----------------- FIXED CORNERS / HUD ----------------- */}
-      {/* Top Left: Clock */}
-      <div className="fixed top-[max(1rem,env(safe-area-inset-top))] left-[max(1rem,env(safe-area-inset-left))] z-30">
-        <Clock />
-      </div>
+      {/* ----------------- TOP NAVBAR HUD (Unified Responsive Header) ----------------- */}
+      <header className="fixed top-0 inset-x-0 pt-[max(0.75rem,env(safe-area-inset-top))] px-3 sm:px-6 flex items-center justify-between z-30 pointer-events-none gap-2">
+        {/* Left: Clock */}
+        <div className="pointer-events-auto shrink-0">
+          <Clock />
+        </div>
 
-      {/* Top Centre: Listener pill */}
-      <div className="fixed top-[max(1rem,env(safe-area-inset-top))] left-1/2 -translate-x-1/2 z-30">
-        <ListenerCount />
-      </div>
+        {/* Center: Live Listeners */}
+        <div className="pointer-events-auto shrink-0">
+          <ListenerCount />
+        </div>
 
-      {/* Top Right: Songs Catalog Drawer Trigger */}
-      <div className="fixed top-[max(1rem,env(safe-area-inset-top))] right-[max(1rem,env(safe-area-inset-right))] z-30 flex items-center gap-2">
-        <button
-          onClick={() => setIsDrawerOpen(true)}
-          className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/10 hover:border-accent/50 text-white/90 hover:text-accent shadow-[0_4px_16px_rgba(0,0,0,0.5)] transition-all duration-200 cursor-pointer select-none text-xs font-semibold"
-        >
-          <svg className="w-4 h-4 fill-current text-accent" viewBox="0 0 24 24">
-            <path d="M4 10h12v2H4zm0-4h16v2H4zm0 8h8v2H4zm10 0v6l5-3-5-3z" />
-          </svg>
-          <span className="font-marathi">सर्व गाणी</span>
-        </button>
-      </div>
+        {/* Right: Songs Catalog Drawer Trigger */}
+        <div className="pointer-events-auto shrink-0">
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-black/55 backdrop-blur-xl border border-white/15 hover:border-accent/50 text-white/90 hover:text-accent shadow-[0_4px_16px_rgba(0,0,0,0.5)] transition-all duration-200 cursor-pointer select-none text-[11px] sm:text-xs font-semibold active:scale-95"
+            aria-label="सर्व गाणी उघडा"
+          >
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-accent" viewBox="0 0 24 24">
+              <path d="M4 10h12v2H4zm0-4h16v2H4zm0 8h8v2H4zm10 0v6l5-3-5-3z" />
+            </svg>
+            <span className="font-marathi">गाणी</span>
+            <span className="font-marathi hidden xs:inline">सूची</span>
+          </button>
+        </div>
+      </header>
 
       {/* ----------------- BOTTOM PLAYER AREA ----------------- */}
-      <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 z-40 w-full max-w-xl px-3 sm:px-0 flex flex-col gap-2.5 sm:gap-3.5">
+      <div className="fixed bottom-[max(0.75rem,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 z-40 w-full max-w-xl sm:max-w-2xl px-2.5 sm:px-4 flex flex-col gap-2 sm:gap-3">
         
         {/* Playlist selector pill row */}
         <PlaylistSelector
@@ -806,25 +880,25 @@ export default function PlayerShell() {
         />
 
         {/* Unified Glass Player Shell */}
-        <div className="w-full rounded-[30px] sm:rounded-full border border-white/15 bg-gradient-to-b from-white/[0.16] to-white/[0.06] backdrop-blur-3xl backdrop-saturate-[1.8] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.25)] p-3.5 sm:p-3 sm:pr-5 glass-glow transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full">
+        <div className="w-full rounded-[26px] sm:rounded-full border border-white/20 bg-gradient-to-b from-white/[0.18] to-white/[0.07] backdrop-blur-3xl backdrop-saturate-[1.8] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.3)] p-3 sm:p-3 sm:pr-5 glass-glow transition-all duration-300">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full">
             
             {/* Left section: Vinyl Disc + Metadata + Seekbar */}
-            <div className="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
+            <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
               <VinylDisc isPlaying={isPlaying} />
 
-              <div className="flex-1 flex flex-col justify-center min-w-0 pr-1 select-none">
+              <div className="flex-1 flex flex-col justify-center min-w-0 pr-0.5 select-none">
                 <div className="flex items-baseline justify-between gap-2 sm:gap-4 mb-0.5">
                   <div className="flex flex-col min-w-0">
-                    <h2 className="text-sm sm:text-[15.5px] font-bold text-white truncate tracking-wide font-marathi">
+                    <h2 className="text-[13.5px] xs:text-[14.5px] sm:text-[16px] font-bold text-white truncate tracking-wide font-marathi">
                       {currentTrack.title}
                     </h2>
-                    <span className="text-xs sm:text-[12.5px] text-white/70 truncate">
+                    <span className="text-[11px] xs:text-[12px] sm:text-[13px] text-white/70 truncate">
                       {currentTrack.artist} {currentTrack.film ? `(${currentTrack.film})` : ""}
                     </span>
                   </div>
 
-                  <div className="text-[10px] sm:text-[11px] font-mono text-white/60 tracking-wider tabular-nums font-semibold shrink-0">
+                  <div className="text-[9.5px] sm:text-[11px] font-mono text-white/60 tracking-wider tabular-nums font-semibold shrink-0">
                     {formatProgressTime(elapsed)} / {formatProgressTime(duration)}
                   </div>
                 </div>
@@ -834,13 +908,13 @@ export default function PlayerShell() {
             </div>
 
             {/* Right section: Transport buttons & controls */}
-            <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-2 shrink-0 pt-1 sm:pt-0 border-t border-white/10 sm:border-t-0">
+            <div className="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-2 shrink-0 pt-1.5 sm:pt-0 border-t border-white/10 sm:border-t-0">
               
               {/* Shuffle button */}
               <button
                 onClick={() => setIsShuffle((prev) => !prev)}
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer ${
-                  isShuffle ? "text-accent bg-accent/15" : "text-white/50 hover:text-white hover:bg-white/5"
+                className={`w-8 h-8 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer active:scale-90 ${
+                  isShuffle ? "text-accent bg-accent/20" : "text-white/50 hover:text-white hover:bg-white/10"
                 }`}
                 title="शफल (Shuffle)"
                 aria-label="Shuffle"
@@ -853,7 +927,7 @@ export default function PlayerShell() {
               {/* Prev button */}
               <button
                 onClick={handlePrev}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 active:scale-90 transition-all cursor-pointer"
+                className="w-9 h-9 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 active:scale-90 transition-all cursor-pointer"
                 aria-label="Previous Track"
                 title="मागील गाणे"
               >
@@ -865,7 +939,7 @@ export default function PlayerShell() {
               {/* Play/Pause Button */}
               <button
                 onClick={handleTogglePlay}
-                className="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-500 to-amber-300 text-black flex items-center justify-center hover:scale-105 active:scale-90 shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all cursor-pointer font-bold"
+                className="w-11 h-11 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-amber-500 to-amber-300 text-black flex items-center justify-center hover:scale-105 active:scale-90 shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all cursor-pointer font-bold"
                 aria-label={isPlaying ? "Pause" : "Play"}
                 title={isPlaying ? "थांबवा" : "सुरू करा"}
               >
@@ -883,7 +957,7 @@ export default function PlayerShell() {
               {/* Next button */}
               <button
                 onClick={handleNext}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 active:scale-90 transition-all cursor-pointer"
+                className="w-9 h-9 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 active:scale-90 transition-all cursor-pointer"
                 aria-label="Next Track"
                 title="पुढील गाणे"
               >
@@ -895,7 +969,7 @@ export default function PlayerShell() {
               {/* Mute/Volume button */}
               <button
                 onClick={handleToggleMute}
-                className="w-8 h-8 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+                className="w-8 h-8 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 active:scale-90 transition-colors cursor-pointer"
                 title={isMuted ? "अनम्यूट" : "म्यूट"}
                 aria-label="Mute Toggle"
               >
