@@ -232,6 +232,284 @@ export const PLAYLISTS: Playlist[] = [
         "fallbackVideoIds": [
           "kLAHVhAPc9A"
         ]
+      },
+      {
+        "id": "g20",
+        "title": "छबीदार छबी (Chabidar Chabi)",
+        "artist": "Usha Mangeshkar",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "y_TRjZz_iy8",
+        "fallbackVideoIds": [
+          "7Qb6txP21Cg",
+          "jfxe5RRBX0g"
+        ]
+      },
+      {
+        "id": "g21",
+        "title": "कसे सरतील सये (Kase Sartil Saye)",
+        "artist": "Saleel Kulkarni, Sandeep Khare",
+        "film": "Bhavgeet",
+        "duration": "3:45",
+        "videoId": "NeFiE-OI-kg",
+        "fallbackVideoIds": [
+          "91IWRQSp7P8",
+          "5s3fly13-Do"
+        ]
+      },
+      {
+        "id": "g22",
+        "title": "मेंदीच्या पानावर (Mendichya Panavar)",
+        "artist": "Lata Mangeshkar, Hridaynath Mangeshkar",
+        "film": "Bhavgeet",
+        "duration": "3:45",
+        "videoId": "LlGkRxbn-N4",
+        "fallbackVideoIds": [
+          "lvlc3-iBkGY",
+          "E8NnMx4dVuU"
+        ]
+      },
+      {
+        "id": "g23",
+        "title": "निशाणा तुला दिसला ना (Nishana Tula Disla Na)",
+        "artist": "Usha Mangeshkar, Ram Kadam",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "jHL7N-rW2kk",
+        "fallbackVideoIds": [
+          "xKgoLWQJTao",
+          "R82NCfkjsX0"
+        ]
+      },
+      {
+        "id": "g24",
+        "title": "दिसते मजला सुखचित्र नवे (Diste Majla Sukhchitra)",
+        "artist": "Anuradha Paudwal",
+        "film": "Ashtavinayak",
+        "duration": "3:45",
+        "videoId": "SI4mz6Cah8o",
+        "fallbackVideoIds": [
+          "4Tftw_ii9i0",
+          "xHYF2VBkUVg"
+        ]
+      },
+      {
+        "id": "g25",
+        "title": "प्रीतीचं झुळझुळ पाणी (Priticha Zulzul Pani)",
+        "artist": "Usha Mangeshkar, Shailendra Singh",
+        "film": "Banya Bapu",
+        "duration": "3:45",
+        "videoId": "GwR8rmZGs7o",
+        "fallbackVideoIds": [
+          "k7fCd4d8Mjk",
+          "5z-cz6lrfUQ"
+        ]
+      },
+      {
+        "id": "g26",
+        "title": "शून्य शून्य मैफिलीत माझ्या (Sunya Sunya Maifilit)",
+        "artist": "Lata Mangeshkar, Hridaynath Mangeshkar",
+        "film": "Umbartha",
+        "duration": "3:45",
+        "videoId": "2uXVX0r_zRo",
+        "fallbackVideoIds": [
+          "cAAII2HTUpY",
+          "-VkzoYNp3GI"
+        ]
+      },
+      {
+        "id": "g27",
+        "title": "आला आला वारा (Aala Aala Vara)",
+        "artist": "Asha Bhosle, Anuradha Paudwal",
+        "film": "Ha Khel Sawalyancha",
+        "duration": "3:45",
+        "videoId": "K6cSJri_4V8",
+        "fallbackVideoIds": [
+          "WeMtmEi5mIw",
+          "9QdEvmYwaKk"
+        ]
+      },
+      {
+        "id": "g28",
+        "title": "काळ्या मातीत मातीत (Kalya Matit Matit)",
+        "artist": "Suresh Wadkar, Anuradha Paudwal",
+        "film": "Are Sansar Sansar",
+        "duration": "3:45",
+        "videoId": "J4m2y42X2s4",
+        "fallbackVideoIds": [
+          "9T6ZQLxaBCM",
+          "IcB1G1pkDVQ"
+        ]
+      },
+      {
+        "id": "g29",
+        "title": "मी रात टाकली (Mi Raat Takali)",
+        "artist": "Lata Mangeshkar, Chandrakant Kale",
+        "film": "Jait Re Jait",
+        "duration": "3:45",
+        "videoId": "OkNLme6dCsE",
+        "fallbackVideoIds": [
+          "y5dYDJZCBkw",
+          "JW_JydGX7Cc"
+        ]
+      },
+      {
+        "id": "g30",
+        "title": "फिटे अंधाराचे जाळे (Phite Andharache Jaale)",
+        "artist": "Sudhir Phadke, Asha Bhosle",
+        "film": "Laxmichi Paule",
+        "duration": "3:45",
+        "videoId": "SGZXkdpqLgM",
+        "fallbackVideoIds": [
+          "GKOEi9p_VaM",
+          "z0KM393kQgU"
+        ]
+      },
+      {
+        "id": "g31",
+        "title": "गोमू संगतीनं माझ्या (Gomu Sangtina Mazya)",
+        "artist": "Hemant Kumar, Asha Bhosle",
+        "film": "Ha Khel Sawalyancha",
+        "duration": "3:45",
+        "videoId": "LB7LwwpoD6w",
+        "fallbackVideoIds": [
+          "T-EMyII4iYo",
+          "6T2pzhJqOMw"
+        ]
+      },
+      {
+        "id": "g32",
+        "title": "राजा ललकारी अशी दे (Raja Lalkari Ashi De)",
+        "artist": "Suresh Wadkar, Anuradha Paudwal",
+        "film": "Are Sansar Sansar",
+        "duration": "3:45",
+        "videoId": "x6y3UcAzgVg",
+        "fallbackVideoIds": [
+          "lDV-ix25cCc",
+          "aLOXqkZFE4I"
+        ]
+      },
+      {
+        "id": "g33",
+        "title": "चंद्रा आहे साक्षीला (Chandra Aahe Sakshila)",
+        "artist": "Asha Bhosle, Sudhir Phadke",
+        "film": "Chandra Hota Sakshila",
+        "duration": "3:45",
+        "videoId": "-IDTaWOj8g4",
+        "fallbackVideoIds": [
+          "G3oQeySW9YQ",
+          "gSRI7MzY3bQ"
+        ]
+      },
+      {
+        "id": "g34",
+        "title": "निंबोणीच्या झाडामागे (Nimbonichya Jhadamage)",
+        "artist": "Suman Kalyanpur",
+        "film": "Bala Gau Kashi Angai",
+        "duration": "3:45",
+        "videoId": "VP3fvoSG9vY",
+        "fallbackVideoIds": [
+          "mEqmlWMU0Gw",
+          "PDcJPHKv-bo"
+        ]
+      },
+      {
+        "id": "g35",
+        "title": "अखेरचा हा तुला दंडवत (Akhercha Ha Tula Dandavat)",
+        "artist": "Lata Mangeshkar",
+        "film": "Maratha Tituka Melvava",
+        "duration": "3:45",
+        "videoId": "A93e9CvlMCY",
+        "fallbackVideoIds": [
+          "r2-w_ATm114",
+          "rReEieEz8cs"
+        ]
+      },
+      {
+        "id": "g36",
+        "title": "सागरा प्राण तळमळला (Sagara Pran Talmalala)",
+        "artist": "Lata Mangeshkar, Hridaynath Mangeshkar",
+        "film": "Patriotic",
+        "duration": "3:45",
+        "videoId": "I4pJ0aD5RtA",
+        "fallbackVideoIds": [
+          "m3PMlsWSQOw",
+          "DwCzt926ctA"
+        ]
+      },
+      {
+        "id": "g37",
+        "title": "असा बेभान हा वारा (Asa Bebhan Ha Vara)",
+        "artist": "Lata Mangeshkar",
+        "film": "Bhavgeet",
+        "duration": "3:45",
+        "videoId": "MxbYSoX2dqo",
+        "fallbackVideoIds": [
+          "ebXwHwNjBiU",
+          "4I5OtfocllE"
+        ]
+      },
+      {
+        "id": "g38",
+        "title": "वादळ वारं सुटलं गं (Vadal Vara Sutla Ga)",
+        "artist": "Lata Mangeshkar",
+        "film": "Koli Geet",
+        "duration": "3:45",
+        "videoId": "GXsJqroe1f0",
+        "fallbackVideoIds": [
+          "NbqcPiAYHs4",
+          "4nKbKYao45E"
+        ]
+      },
+      {
+        "id": "g39",
+        "title": "सख्या रे घायाळ मी हरिणी (Sakhya Re Ghayal Mi Harini)",
+        "artist": "Lata Mangeshkar, Asha Bhosle",
+        "film": "Samna",
+        "duration": "3:45",
+        "videoId": "dv3NcT7SEac",
+        "fallbackVideoIds": [
+          "Eiiuuz9dthc",
+          "usJxvVFlfyc"
+        ]
+      },
+      {
+        "id": "g40",
+        "title": "दिस चार झाले मन (Dis Char Zale Man)",
+        "artist": "Sadhana Sargam",
+        "film": "Bhavgeet",
+        "duration": "3:45",
+        "videoId": "oFlPD9zve4I",
+        "fallbackVideoIds": [
+          "yLpnrKFT5mI",
+          "szMs0iSc2AQ"
+        ]
+      },
+      {
+        "id": "g41",
+        "title": "पिंजरा - संपूर्ण लावणी जुगलबंदी (Pinjara Lavani Jukebox)",
+        "artist": "Usha Mangeshkar, Lata Mangeshkar, Ram Kadam",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "Iy9z3pYfmzI",
+        "fallbackVideoIds": [
+          "y_TRjZz_iy8",
+          "jHL7N-rW2kk",
+          "X52U9sRqoBY"
+        ]
+      },
+      {
+        "id": "g42",
+        "title": "वल्हव रे नाखवा (Valhav Re Nakhava)",
+        "artist": "Lata Mangeshkar, Hemant Kumar",
+        "film": "Koli Geet",
+        "duration": "3:45",
+        "videoId": "fNnnHDBLU6U",
+        "fallbackVideoIds": [
+          "yJfy6X2mOjA",
+          "ED9_hVct52A",
+          "J9wlXHdXtks"
+        ]
       }
     ]
   },
@@ -239,7 +517,7 @@ export const PLAYLISTS: Playlist[] = [
     "id": "lavani-folk",
     "name": "लावणी & लोकगीते",
     "marathiName": "ठसकेबाज लावणी व लोकगीते",
-    "description": "वाजले की बारा, कसं काय पाटील, सोळावं वरीस आणि महाराष्ट्राच्या संस्कृतीचा अस्सल ठसका.",
+    "description": "चंद्रा, वाजले की बारा, छबीदार छबी, कसं काय पाटील, सोळावं वरीस आणि महाराष्ट्राच्या संस्कृतीचा अस्सल ठसका.",
     "tracks": [
       {
         "id": "l1",
@@ -405,6 +683,189 @@ export const PLAYLISTS: Playlist[] = [
         "fallbackVideoIds": [
           "-zbrYZG-iwk"
         ]
+      },
+      {
+        "id": "l16",
+        "title": "छबीदार छबी (Chabidar Chabi)",
+        "artist": "Usha Mangeshkar",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "y_TRjZz_iy8",
+        "fallbackVideoIds": [
+          "7Qb6txP21Cg",
+          "jfxe5RRBX0g",
+          "GWrC1omWR84"
+        ]
+      },
+      {
+        "id": "l17",
+        "title": "चंद्रा (Chandra)",
+        "artist": "Shreya Ghoshal, Ajay-Atul",
+        "film": "Chandramukhi",
+        "duration": "3:45",
+        "videoId": "r6tU3GvJ5so",
+        "fallbackVideoIds": [
+          "--98Jv1XkqQ",
+          "amjOQ29X_Rk"
+        ]
+      },
+      {
+        "id": "l18",
+        "title": "मदनमंजिरी (Madanmanjiri)",
+        "artist": "Vaishali Made, Avinash-Vishwajeet",
+        "film": "Phullwanti",
+        "duration": "3:45",
+        "videoId": "Sy15iBaba-U",
+        "fallbackVideoIds": [
+          "oEmD35XlsKU",
+          "BzbdQE9iU18"
+        ]
+      },
+      {
+        "id": "l19",
+        "title": "निशाणा तुला दिसला ना (Nishana Tula Disla Na)",
+        "artist": "Usha Mangeshkar, Ram Kadam",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "jHL7N-rW2kk",
+        "fallbackVideoIds": [
+          "xKgoLWQJTao",
+          "R82NCfkjsX0"
+        ]
+      },
+      {
+        "id": "l20",
+        "title": "ही पोळी साजूक तुपातली (Hi Poli Saajuk)",
+        "artist": "Reshma Sonawane, Chinar-Mahesh",
+        "film": "Timepass 2",
+        "duration": "3:45",
+        "videoId": "Qnac7Yeq5Xg",
+        "fallbackVideoIds": [
+          "ZGiz23LuHGM",
+          "yBT7LO6ZXlc"
+        ]
+      },
+      {
+        "id": "l21",
+        "title": "ये गो ये ये मैना (Ye Go Ye Ye Maina)",
+        "artist": "Ajay-Atul, Anand Shinde",
+        "film": "Jatra",
+        "duration": "3:45",
+        "videoId": "yd2DwdqZsrY",
+        "fallbackVideoIds": [
+          "Y8B49YXPG58",
+          "KcNU5dbCk58"
+        ]
+      },
+      {
+        "id": "l22",
+        "title": "ऐका दाजीबा (Aika Dajiba)",
+        "artist": "Vaishali Samant, Avadhoot Gupte",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "4GowgfCbYmM",
+        "fallbackVideoIds": [
+          "NPpHnkXbJko",
+          "pVH7c9J5124"
+        ]
+      },
+      {
+        "id": "l23",
+        "title": "माळ्याच्या मळ्यामंदी कोण गं उभी (Malyachya Malya)",
+        "artist": "Usha Mangeshkar",
+        "film": "Songadya",
+        "duration": "3:45",
+        "videoId": "5B0ZanJ3occ",
+        "fallbackVideoIds": [
+          "BBIYsO8I5LE",
+          "2gxyJgEOPuk"
+        ]
+      },
+      {
+        "id": "l24",
+        "title": "हिल पोरी हिला (Hil Pori Hila)",
+        "artist": "Rohit Raut, Sonali Sonawane",
+        "film": "Folk",
+        "duration": "3:45",
+        "videoId": "IbUcrzkMuQw",
+        "fallbackVideoIds": [
+          "FziGOXO0-x0",
+          "7hgLFSe_Zmg"
+        ]
+      },
+      {
+        "id": "l25",
+        "title": "मी रात टाकली (Mi Raat Takali)",
+        "artist": "Lata Mangeshkar, Chandrakant Kale",
+        "film": "Jait Re Jait",
+        "duration": "3:45",
+        "videoId": "OkNLme6dCsE",
+        "fallbackVideoIds": [
+          "y5dYDJZCBkw",
+          "JW_JydGX7Cc"
+        ]
+      },
+      {
+        "id": "l26",
+        "title": "सख्या रे घायाळ मी हरिणी (Sakhya Re Ghayal Mi Harini)",
+        "artist": "Asha Bhosle",
+        "film": "Samna",
+        "duration": "3:45",
+        "videoId": "dv3NcT7SEac",
+        "fallbackVideoIds": [
+          "Eiiuuz9dthc",
+          "usJxvVFlfyc"
+        ]
+      },
+      {
+        "id": "l27",
+        "title": "एक लाजरा न् साजरा मुखडा (Ek Lajara N Sajra)",
+        "artist": "Asha Bhosle",
+        "film": "Shikarla Jave",
+        "duration": "3:45",
+        "videoId": "5v3H_NwnyJY",
+        "fallbackVideoIds": [
+          "3_Fr-XpqhZ4",
+          "c0YmQJp7mYU"
+        ]
+      },
+      {
+        "id": "l28",
+        "title": "पिंजरा - संपूर्ण लावणी जुगलबंदी (Pinjara Lavani Jukebox)",
+        "artist": "Usha Mangeshkar, Lata Mangeshkar, Ram Kadam",
+        "film": "Pinjara",
+        "duration": "3:45",
+        "videoId": "Iy9z3pYfmzI",
+        "fallbackVideoIds": [
+          "y_TRjZz_iy8",
+          "jHL7N-rW2kk",
+          "X52U9sRqoBY"
+        ]
+      },
+      {
+        "id": "l29",
+        "title": "छबीदार छबी - Girlz व्हर्जन (Chabidar Chabi - Girlz)",
+        "artist": "Mugdha Karhade, Adarsh Shinde",
+        "film": "Girlz",
+        "duration": "3:45",
+        "videoId": "GWrC1omWR84",
+        "fallbackVideoIds": [
+          "y_TRjZz_iy8",
+          "7Qb6txP21Cg"
+        ]
+      },
+      {
+        "id": "l30",
+        "title": "वल्हव रे नाखवा (Valhav Re Nakhava)",
+        "artist": "Lata Mangeshkar, Hemant Kumar",
+        "film": "Koli Geet",
+        "duration": "3:45",
+        "videoId": "fNnnHDBLU6U",
+        "fallbackVideoIds": [
+          "yJfy6X2mOjA",
+          "ED9_hVct52A",
+          "J9wlXHdXtks"
+        ]
       }
     ]
   },
@@ -412,7 +873,7 @@ export const PLAYLISTS: Playlist[] = [
     "id": "movie-hits",
     "name": "चित्रपट संगीत",
     "marathiName": "ब्लॉकबस्टर चित्रपट गाणी",
-    "description": "सैराट, नटरंग, दुनियादारी, जोगवा आणि टाइमपास या सुपरहिट चित्रपटांमधील अवीट गोडीची गाणी.",
+    "description": "सैराट, चंद्रा, कितीदा नव्याने, धागा धागा, दुनियादारी आणि सुपरहिट चित्रपटांमधील अवीट गोडीची गाणी.",
     "tracks": [
       {
         "id": "m1",
@@ -721,6 +1182,294 @@ export const PLAYLISTS: Playlist[] = [
         "fallbackVideoIds": [
           "xmKkGnltcrg"
         ]
+      },
+      {
+        "id": "m29",
+        "title": "कितीदा नव्याने (Kitida Navyane)",
+        "artist": "Mandar Apte, Arya Ambekar",
+        "film": "Ti Saddhya Kay Karte",
+        "duration": "3:45",
+        "videoId": "xdN2gYjcWuM",
+        "fallbackVideoIds": [
+          "g2hGVqkgJyA",
+          "nMk2DT6Y9dw"
+        ]
+      },
+      {
+        "id": "m30",
+        "title": "धागा धागा (Dhaga Dhaga)",
+        "artist": "Harshavardhan Wavare, Anandi Joshi, Amitraj",
+        "film": "Daagdi Chaawl",
+        "duration": "3:45",
+        "videoId": "6zoKKPTzWUE",
+        "fallbackVideoIds": [
+          "wA4aSg51oNI",
+          "CjW8FxfDdlM"
+        ]
+      },
+      {
+        "id": "m31",
+        "title": "चंद्रा (Chandra)",
+        "artist": "Shreya Ghoshal, Ajay-Atul",
+        "film": "Chandramukhi",
+        "duration": "3:45",
+        "videoId": "r6tU3GvJ5so",
+        "fallbackVideoIds": [
+          "--98Jv1XkqQ",
+          "amjOQ29X_Rk"
+        ]
+      },
+      {
+        "id": "m32",
+        "title": "मदनमंजिरी (Madanmanjiri)",
+        "artist": "Vaishali Made, Avinash-Vishwajeet",
+        "film": "Phullwanti",
+        "duration": "3:45",
+        "videoId": "Sy15iBaba-U",
+        "fallbackVideoIds": [
+          "oEmD35XlsKU",
+          "BzbdQE9iU18"
+        ]
+      },
+      {
+        "id": "m33",
+        "title": "ये गो ये ये मैना (Ye Go Ye Ye Maina)",
+        "artist": "Ajay-Atul, Anand Shinde",
+        "film": "Jatra",
+        "duration": "3:45",
+        "videoId": "yd2DwdqZsrY",
+        "fallbackVideoIds": [
+          "Y8B49YXPG58",
+          "KcNU5dbCk58"
+        ]
+      },
+      {
+        "id": "m34",
+        "title": "साज ह्यो तुझा (Saaz Hyo Tuza)",
+        "artist": "Onkarswaroop",
+        "film": "Baban",
+        "duration": "3:45",
+        "videoId": "e25zWcOnrh8",
+        "fallbackVideoIds": [
+          "I-4e4YMq6Rs",
+          "rGefONJ0r48"
+        ]
+      },
+      {
+        "id": "m35",
+        "title": "ही पोळी साजूक तुपातली (Hi Poli Saajuk)",
+        "artist": "Reshma Sonawane, Chinar-Mahesh",
+        "film": "Timepass 2",
+        "duration": "3:45",
+        "videoId": "Qnac7Yeq5Xg",
+        "fallbackVideoIds": [
+          "ZGiz23LuHGM",
+          "yBT7LO6ZXlc"
+        ]
+      },
+      {
+        "id": "m36",
+        "title": "टिक टिक वाजते डोक्यात (Tik Tik Vajate Dokyat)",
+        "artist": "Sonu Nigam, Sayali Pankaj",
+        "film": "Duniyadari",
+        "duration": "3:45",
+        "videoId": "A4snplP4_Wk",
+        "fallbackVideoIds": [
+          "pK6fpR6u8bw",
+          "AaojT6O0xjM"
+        ]
+      },
+      {
+        "id": "m37",
+        "title": "तोळा तोळा (Tola Tola)",
+        "artist": "Amitraj, Bela Shende",
+        "film": "Tu Hi Re",
+        "duration": "3:45",
+        "videoId": "EpSekM4n87Q",
+        "fallbackVideoIds": [
+          "GAVS6DuqOQM",
+          "kWhqxSsPwv8"
+        ]
+      },
+      {
+        "id": "m38",
+        "title": "जरा जरा (Jara Jara Tip Tip)",
+        "artist": "Hrishikesh Ranade, Aarya Ambekar",
+        "film": "Ti Saddhya Kay Karte",
+        "duration": "3:45",
+        "videoId": "CzdT_L2UjQI",
+        "fallbackVideoIds": [
+          "u0NamXPsUDk",
+          "ZN6W3EaHOoI"
+        ]
+      },
+      {
+        "id": "m39",
+        "title": "मन तळ्यात मळ्यात (Man Talyat Malyat)",
+        "artist": "Rahul Vaidya, Shreya Ghoshal",
+        "film": "Sanai Choughade",
+        "duration": "3:45",
+        "videoId": "bshSJf1BHlY",
+        "fallbackVideoIds": [
+          "yJ4X6nz2vMQ",
+          "TbBbZ-lYg3k"
+        ]
+      },
+      {
+        "id": "m40",
+        "title": "तू ही रे माझा मितवा (Mitwaa Title Track)",
+        "artist": "Shankar Mahadevan, Janhavi Prabhu Arora",
+        "film": "Mitwaa",
+        "duration": "3:45",
+        "videoId": "lXX9IH12WR8",
+        "fallbackVideoIds": [
+          "trDHmX2-eOs",
+          "9hDkoACcs_I"
+        ]
+      },
+      {
+        "id": "m41",
+        "title": "सर सुखाची श्रावणी (Sar Sukhachi Shravani)",
+        "artist": "Abhijeet Sawant, Bela Shende",
+        "film": "Mangalashtak Once More",
+        "duration": "3:45",
+        "videoId": "AaIp2qMOiuE",
+        "fallbackVideoIds": [
+          "RAbCgqSnJH4",
+          "rZRBcAFa38c"
+        ]
+      },
+      {
+        "id": "m42",
+        "title": "झिंदगी झिंदगी - ही सुरेखा पटलेली आहे (Zindagi Zindagi)",
+        "artist": "Sachin Pilgaonkar, Mahesh Manjrekar, Swwapnil Joshi",
+        "film": "Duniyadari",
+        "duration": "3:45",
+        "videoId": "rRpfAHwtveQ",
+        "fallbackVideoIds": [
+          "A4snplP4_Wk",
+          "pK6fpR6u8bw"
+        ]
+      },
+      {
+        "id": "m43",
+        "title": "प्रीतीचं झुळझुळ पाणी (Priticha Zulzul Pani)",
+        "artist": "Usha Mangeshkar, Shailendra Singh",
+        "film": "Banya Bapu",
+        "duration": "3:45",
+        "videoId": "GwR8rmZGs7o",
+        "fallbackVideoIds": [
+          "k7fCd4d8Mjk",
+          "5z-cz6lrfUQ"
+        ]
+      },
+      {
+        "id": "m44",
+        "title": "केवड्याचं पान तू (Kevdyach Paan Tu)",
+        "artist": "Ajay Gogavale, Aarya Ambekar",
+        "film": "Sarla Ek Koti",
+        "duration": "3:45",
+        "videoId": "Acnp6vezJig",
+        "fallbackVideoIds": [
+          "77Gco_qXBcc",
+          "L7-YoT6so5o"
+        ]
+      },
+      {
+        "id": "m45",
+        "title": "चांद तू नभातला (Chand Tu Nabhatla)",
+        "artist": "Swapnil Bandodkar",
+        "film": "Sandook",
+        "duration": "3:45",
+        "videoId": "5AmHMSEY6kg",
+        "fallbackVideoIds": [
+          "C6vn9jefNj8",
+          "LR0gTx49JYI"
+        ]
+      },
+      {
+        "id": "m46",
+        "title": "आला आला वारा (Aala Aala Vara)",
+        "artist": "Asha Bhosle, Anuradha Paudwal",
+        "film": "Ha Khel Sawalyancha",
+        "duration": "3:45",
+        "videoId": "K6cSJri_4V8",
+        "fallbackVideoIds": [
+          "WeMtmEi5mIw",
+          "9QdEvmYwaKk"
+        ]
+      },
+      {
+        "id": "m47",
+        "title": "काळ्या मातीत मातीत (Kalya Matit Matit)",
+        "artist": "Suresh Wadkar, Anuradha Paudwal",
+        "film": "Are Sansar Sansar",
+        "duration": "3:45",
+        "videoId": "J4m2y42X2s4",
+        "fallbackVideoIds": [
+          "9T6ZQLxaBCM",
+          "IcB1G1pkDVQ"
+        ]
+      },
+      {
+        "id": "m48",
+        "title": "शून्य शून्य मैफिलीत माझ्या (Sunya Sunya Maifilit)",
+        "artist": "Lata Mangeshkar, Hridaynath Mangeshkar",
+        "film": "Umbartha",
+        "duration": "3:45",
+        "videoId": "2uXVX0r_zRo",
+        "fallbackVideoIds": [
+          "cAAII2HTUpY",
+          "-VkzoYNp3GI"
+        ]
+      },
+      {
+        "id": "m49",
+        "title": "फिटे अंधाराचे जाळे (Phite Andharache Jaale)",
+        "artist": "Sudhir Phadke, Asha Bhosle",
+        "film": "Laxmichi Paule",
+        "duration": "3:45",
+        "videoId": "SGZXkdpqLgM",
+        "fallbackVideoIds": [
+          "GKOEi9p_VaM",
+          "z0KM393kQgU"
+        ]
+      },
+      {
+        "id": "m50",
+        "title": "गोमू संगतीनं माझ्या (Gomu Sangtina Mazya)",
+        "artist": "Hemant Kumar, Asha Bhosle",
+        "film": "Ha Khel Sawalyancha",
+        "duration": "3:45",
+        "videoId": "LB7LwwpoD6w",
+        "fallbackVideoIds": [
+          "T-EMyII4iYo",
+          "6T2pzhJqOMw"
+        ]
+      },
+      {
+        "id": "m51",
+        "title": "छबीदार छबी - Girlz व्हर्जन (Chabidar Chabi - Girlz)",
+        "artist": "Mugdha Karhade, Adarsh Shinde",
+        "film": "Girlz",
+        "duration": "3:45",
+        "videoId": "GWrC1omWR84",
+        "fallbackVideoIds": [
+          "y_TRjZz_iy8",
+          "7Qb6txP21Cg"
+        ]
+      },
+      {
+        "id": "m52",
+        "title": "सुन्या सुन्या मनामध्ये (Sunya Sunya Mana Madhe)",
+        "artist": "Ketaki Mategaonkar, Adarsh Shinde",
+        "film": "Timepass 2",
+        "duration": "3:45",
+        "videoId": "ZJS3sM7KRac",
+        "fallbackVideoIds": [
+          "RXjaD4667h0",
+          "0WKD-nZlUf8"
+        ]
       }
     ]
   },
@@ -728,7 +1477,7 @@ export const PLAYLISTS: Playlist[] = [
     "id": "modern-pop",
     "name": "पॉप & ट्रेंडिंग",
     "marathiName": "मॉडर्न मराठी पॉप",
-    "description": "गुलाबी साडी, बहरला हा मधुमास, वेड लावला आणि संजू राठोड यांची सध्याची सर्वात गाजलेली गाणी.",
+    "description": "गुलाबी साडी, चंद्रा, वेड लावलं, कितीदा नव्याने, गोव्याच्या किनार्यावर, बहरला हा मधुमास आणि संजू राठोड यांची सध्याची सर्वात गाजलेली गाणी.",
     "tracks": [
       {
         "id": "p1",
@@ -1279,6 +2028,244 @@ export const PLAYLISTS: Playlist[] = [
         "fallbackVideoIds": [
           "v2YHwuu4n5U"
         ]
+      },
+      {
+        "id": "p51",
+        "title": "वेड लावलं (Ved Lavla)",
+        "artist": "Nihar Shembekar, Shark ft. Neel Salekar, Yashashree Rao",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "VC58SsLEsSg",
+        "fallbackVideoIds": [
+          "8P_LVWwK0WY"
+        ]
+      },
+      {
+        "id": "p52",
+        "title": "रुपेरी वाळूत (Ruperi Valut - New)",
+        "artist": "Abhijeet Sawant ft. Gautami Patil",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "nZaDmhlMBOE",
+        "fallbackVideoIds": [
+          "FPZd7basRos"
+        ]
+      },
+      {
+        "id": "p53",
+        "title": "गोव्याच्या किनार्यावर (Govyachya Kinaryav)",
+        "artist": "Suhrud Wardekar, Pravin Koli, Kumar Divekar",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "6dmH5DfEn4o",
+        "fallbackVideoIds": [
+          "0RygjJDcolA",
+          "wOWEDnYCoHY"
+        ]
+      },
+      {
+        "id": "p54",
+        "title": "कितीदा नव्याने (Kitida Navyane)",
+        "artist": "Mandar Apte, Arya Ambekar",
+        "film": "Ti Saddhya Kay Karte",
+        "duration": "3:45",
+        "videoId": "xdN2gYjcWuM",
+        "fallbackVideoIds": [
+          "g2hGVqkgJyA",
+          "nMk2DT6Y9dw"
+        ]
+      },
+      {
+        "id": "p55",
+        "title": "धागा धागा (Dhaga Dhaga)",
+        "artist": "Harshavardhan Wavare, Anandi Joshi, Amitraj",
+        "film": "Daagdi Chaawl",
+        "duration": "3:45",
+        "videoId": "6zoKKPTzWUE",
+        "fallbackVideoIds": [
+          "wA4aSg51oNI",
+          "CjW8FxfDdlM"
+        ]
+      },
+      {
+        "id": "p56",
+        "title": "चंद्रा (Chandra)",
+        "artist": "Shreya Ghoshal, Ajay-Atul",
+        "film": "Chandramukhi",
+        "duration": "3:45",
+        "videoId": "r6tU3GvJ5so",
+        "fallbackVideoIds": [
+          "--98Jv1XkqQ",
+          "amjOQ29X_Rk"
+        ]
+      },
+      {
+        "id": "p57",
+        "title": "मदनमंजिरी (Madanmanjiri)",
+        "artist": "Vaishali Made, Avinash-Vishwajeet",
+        "film": "Phullwanti",
+        "duration": "3:45",
+        "videoId": "Sy15iBaba-U",
+        "fallbackVideoIds": [
+          "oEmD35XlsKU",
+          "BzbdQE9iU18"
+        ]
+      },
+      {
+        "id": "p58",
+        "title": "साज ह्यो तुझा (Saaz Hyo Tuza)",
+        "artist": "Onkarswaroop",
+        "film": "Baban",
+        "duration": "3:45",
+        "videoId": "e25zWcOnrh8",
+        "fallbackVideoIds": [
+          "I-4e4YMq6Rs",
+          "rGefONJ0r48"
+        ]
+      },
+      {
+        "id": "p59",
+        "title": "ऐका दाजीबा (Aika Dajiba)",
+        "artist": "Vaishali Samant, Avadhoot Gupte",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "4GowgfCbYmM",
+        "fallbackVideoIds": [
+          "NPpHnkXbJko",
+          "pVH7c9J5124"
+        ]
+      },
+      {
+        "id": "p60",
+        "title": "टिक टिक वाजते डोक्यात (Tik Tik Vajate Dokyat)",
+        "artist": "Sonu Nigam, Sayali Pankaj",
+        "film": "Duniyadari",
+        "duration": "3:45",
+        "videoId": "A4snplP4_Wk",
+        "fallbackVideoIds": [
+          "pK6fpR6u8bw",
+          "AaojT6O0xjM"
+        ]
+      },
+      {
+        "id": "p61",
+        "title": "तोळा तोळा (Tola Tola)",
+        "artist": "Amitraj, Bela Shende",
+        "film": "Tu Hi Re",
+        "duration": "3:45",
+        "videoId": "EpSekM4n87Q",
+        "fallbackVideoIds": [
+          "GAVS6DuqOQM",
+          "kWhqxSsPwv8"
+        ]
+      },
+      {
+        "id": "p62",
+        "title": "जरा जरा (Jara Jara Tip Tip)",
+        "artist": "Hrishikesh Ranade, Aarya Ambekar",
+        "film": "Ti Saddhya Kay Karte",
+        "duration": "3:45",
+        "videoId": "CzdT_L2UjQI",
+        "fallbackVideoIds": [
+          "u0NamXPsUDk",
+          "ZN6W3EaHOoI"
+        ]
+      },
+      {
+        "id": "p63",
+        "title": "तू ही रे माझा मितवा (Mitwaa Title Track)",
+        "artist": "Shankar Mahadevan, Janhavi Prabhu Arora",
+        "film": "Mitwaa",
+        "duration": "3:45",
+        "videoId": "lXX9IH12WR8",
+        "fallbackVideoIds": [
+          "trDHmX2-eOs",
+          "9hDkoACcs_I"
+        ]
+      },
+      {
+        "id": "p64",
+        "title": "सर सुखाची श्रावणी (Sar Sukhachi Shravani)",
+        "artist": "Abhijeet Sawant, Bela Shende",
+        "film": "Mangalashtak Once More",
+        "duration": "3:45",
+        "videoId": "AaIp2qMOiuE",
+        "fallbackVideoIds": [
+          "RAbCgqSnJH4",
+          "rZRBcAFa38c"
+        ]
+      },
+      {
+        "id": "p65",
+        "title": "झिंदगी झिंदगी - ही सुरेखा पटलेली आहे (Zindagi Zindagi)",
+        "artist": "Sachin Pilgaonkar, Mahesh Manjrekar, Swwapnil Joshi",
+        "film": "Duniyadari",
+        "duration": "3:45",
+        "videoId": "rRpfAHwtveQ",
+        "fallbackVideoIds": [
+          "A4snplP4_Wk",
+          "pK6fpR6u8bw"
+        ]
+      },
+      {
+        "id": "p66",
+        "title": "केवड्याचं पान तू (Kevdyach Paan Tu)",
+        "artist": "Ajay Gogavale, Aarya Ambekar",
+        "film": "Sarla Ek Koti",
+        "duration": "3:45",
+        "videoId": "Acnp6vezJig",
+        "fallbackVideoIds": [
+          "77Gco_qXBcc",
+          "L7-YoT6so5o"
+        ]
+      },
+      {
+        "id": "p67",
+        "title": "चांद तू नभातला (Chand Tu Nabhatla)",
+        "artist": "Swapnil Bandodkar",
+        "film": "Sandook",
+        "duration": "3:45",
+        "videoId": "5AmHMSEY6kg",
+        "fallbackVideoIds": [
+          "C6vn9jefNj8",
+          "LR0gTx49JYI"
+        ]
+      },
+      {
+        "id": "p68",
+        "title": "हिल पोरी हिला (Hil Pori Hila)",
+        "artist": "Rohit Raut, Sonali Sonawane",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "IbUcrzkMuQw",
+        "fallbackVideoIds": [
+          "FziGOXO0-x0",
+          "7hgLFSe_Zmg"
+        ]
+      },
+      {
+        "id": "p69",
+        "title": "छबीदार छबी - Girlz व्हर्जन (Chabidar Chabi - Girlz)",
+        "artist": "Mugdha Karhade, Adarsh Shinde",
+        "film": "Girlz",
+        "duration": "3:45",
+        "videoId": "GWrC1omWR84",
+        "fallbackVideoIds": [
+          "y_TRjZz_iy8",
+          "7Qb6txP21Cg"
+        ]
+      },
+      {
+        "id": "p70",
+        "title": "सुन्या सुन्या मनामध्ये (Sunya Sunya Mana Madhe)",
+        "artist": "Ketaki Mategaonkar, Adarsh Shinde",
+        "film": "Timepass 2",
+        "duration": "3:45",
+        "videoId": "ZJS3sM7KRac",
+        "fallbackVideoIds": [
+          "RXjaD4667h0",
+          "0WKD-nZlUf8"
+        ]
       }
     ]
   },
@@ -1375,6 +2362,54 @@ export const PLAYLISTS: Playlist[] = [
         "fallbackVideoIds": [
           "0Dbp8vyzPr0"
         ]
+      },
+      {
+        "id": "d9",
+        "title": "अशी चिक मोत्याची माळ (Ashi Chik Motyachi Maal)",
+        "artist": "Lata Mangeshkar",
+        "film": "Devotional",
+        "duration": "3:45",
+        "videoId": "PNlMAInaV2w",
+        "fallbackVideoIds": [
+          "UhQIuMZXBE4",
+          "K2PiYoWOQ5Q"
+        ]
+      },
+      {
+        "id": "d10",
+        "title": "दिसते मजला सुखचित्र नवे (Diste Majla Sukhchitra)",
+        "artist": "Anuradha Paudwal",
+        "film": "Ashtavinayak",
+        "duration": "3:45",
+        "videoId": "SI4mz6Cah8o",
+        "fallbackVideoIds": [
+          "4Tftw_ii9i0",
+          "xHYF2VBkUVg"
+        ]
+      },
+      {
+        "id": "d11",
+        "title": "अखेरचा हा तुला दंडवत (Akhercha Ha Tula Dandavat)",
+        "artist": "Lata Mangeshkar",
+        "film": "Maratha Tituka Melvava",
+        "duration": "3:45",
+        "videoId": "A93e9CvlMCY",
+        "fallbackVideoIds": [
+          "r2-w_ATm114",
+          "rReEieEz8cs"
+        ]
+      },
+      {
+        "id": "d12",
+        "title": "सागरा प्राण तळमळला (Sagara Pran Talmalala)",
+        "artist": "Lata Mangeshkar, Hridaynath Mangeshkar",
+        "film": "Patriotic",
+        "duration": "3:45",
+        "videoId": "I4pJ0aD5RtA",
+        "fallbackVideoIds": [
+          "m3PMlsWSQOw",
+          "DwCzt926ctA"
+        ]
       }
     ]
   },
@@ -1382,7 +2417,7 @@ export const PLAYLISTS: Playlist[] = [
     "id": "regional-konkani",
     "name": "कोकणी & लोकसंस्कृती",
     "marathiName": "कोकणी व कोळीगीते",
-    "description": "हि चाल तुरू तुरू, रुपेरी वाळू, सण आयलो गो आणि सागरतीराची कोळी संस्कृती.",
+    "description": "गोव्याच्या किनार्यावर, हि चाल तुरू तुरू, रुपेरी वाळू, सण आयलो गो आणि सागरतीराची कोळी संस्कृती.",
     "tracks": [
       {
         "id": "k1",
@@ -1525,6 +2560,79 @@ export const PLAYLISTS: Playlist[] = [
         "videoId": "ZSDAL2wHqLw",
         "fallbackVideoIds": [
           "QCIc5fnj4NM"
+        ]
+      },
+      {
+        "id": "k14",
+        "title": "गोव्याच्या किनार्यावर (Govyachya Kinaryav)",
+        "artist": "Suhrud Wardekar, Pravin Koli, Kumar Divekar",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "6dmH5DfEn4o",
+        "fallbackVideoIds": [
+          "0RygjJDcolA",
+          "wOWEDnYCoHY"
+        ]
+      },
+      {
+        "id": "k15",
+        "title": "रुपेरी वाळूत (Ruperi Valut - Gautami Patil)",
+        "artist": "Abhijeet Sawant ft. Gautami Patil",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "nZaDmhlMBOE",
+        "fallbackVideoIds": [
+          "FPZd7basRos",
+          "J4s__qsMwGc"
+        ]
+      },
+      {
+        "id": "k16",
+        "title": "गोमू संगतीनं माझ्या (Gomu Sangtina Mazya)",
+        "artist": "Hemant Kumar, Asha Bhosle",
+        "film": "Ha Khel Sawalyancha",
+        "duration": "3:45",
+        "videoId": "LB7LwwpoD6w",
+        "fallbackVideoIds": [
+          "T-EMyII4iYo",
+          "6T2pzhJqOMw"
+        ]
+      },
+      {
+        "id": "k17",
+        "title": "वादळ वारं सुटलं गं (Vadal Vara Sutla Ga)",
+        "artist": "Lata Mangeshkar",
+        "film": "Koli Geet",
+        "duration": "3:45",
+        "videoId": "GXsJqroe1f0",
+        "fallbackVideoIds": [
+          "NbqcPiAYHs4",
+          "4nKbKYao45E"
+        ]
+      },
+      {
+        "id": "k18",
+        "title": "हिल पोरी हिला (Hil Pori Hila)",
+        "artist": "Rohit Raut, Sonali Sonawane",
+        "film": "Single",
+        "duration": "3:45",
+        "videoId": "IbUcrzkMuQw",
+        "fallbackVideoIds": [
+          "FziGOXO0-x0",
+          "7hgLFSe_Zmg"
+        ]
+      },
+      {
+        "id": "k19",
+        "title": "वल्हव रे नाखवा (Valhav Re Nakhava)",
+        "artist": "Lata Mangeshkar, Hemant Kumar",
+        "film": "Koli Geet",
+        "duration": "3:45",
+        "videoId": "fNnnHDBLU6U",
+        "fallbackVideoIds": [
+          "yJfy6X2mOjA",
+          "ED9_hVct52A",
+          "J9wlXHdXtks"
         ]
       }
     ]
